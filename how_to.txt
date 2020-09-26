@@ -1,0 +1,19 @@
+#STEPS IN A PROGRAM
+###
+#CREATE LOCAL ENV
+conda create -n cv-nd python=3.8; source activate cv-nd
+#INSTALL PILLOW
+pip install Pillow
+#INSTALL PYTESSERACT (ON MAC only!)
+brew install tesseract
+#INSTALL PYTESSERACT (applicable for non-osx)
+#cd pytesseract && pip install -U
+#INSTALL GERMAN FRAKTUR
+brew install tesseract-lang
+#INSTALL TOX TO TEST BUILD
+pip install tox
+#TEST BUILD (I exited via keyboard interrupt after py37: InterpreterNotFound: python3.7, but I defined ENV as py38 anyway)
+tox
+#OPEN JUPYTER
+jupyter notebook
+#Jupyter (see .ipynb)
